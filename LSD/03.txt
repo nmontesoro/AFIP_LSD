@@ -1,0 +1,9 @@
+n|id_registro|2|0l|3||
+n|cuil|11|0l|cuil_a||
+s|cod_concepto|10| l|""||
+n|cantidad|5|0l|0||
+s|unidades|1| l|"$"||
+n|importe|15|0l|""||
+s|tipo|1| l|""||
+* Formato AAAAMM
+n|periodo_ajuste|6|0l|0||

@@ -1,0 +1,15 @@
+n|id_registro|2|0l|2||
+s|cuil_empleado|11| l|cuil_a|-|
+* Valor optativo
+s|legajo|10| l|NVL(legajo, 0)||
+* Area donde el empleado desempeña sus tareas. Optativo.
+s|dep_revista|50| l|""||
+* Obligatorio si forma_de_pago == 3
+n|cbu|22| l|""||
+n|dias_liquidados|3|0l|DAY(feclia)||
+* Fechas formato YYYYMMDD
+s|fecha_pago|8| l|DTOC(fecliq)|/|
+* Optativo
+s|fecha_rubrica|8| l|""||
+* 1: efectivo, 2: cheque, 3: acreditacion
+s|forma_pago|1| l|1||

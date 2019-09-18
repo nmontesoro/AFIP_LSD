@@ -1,0 +1,56 @@
+n|id_registro|2|0l|4||
+n|cuil|11|0l|cuil_a||
+* <rant>
+* Querida AFIP:
+* POR QUÉ CARAJO USAN ACENTOS EN LOS NOMBRES DE LOS CAMPOS!!!!1!
+* POR LO MENOS SEAN CONSISTENTES. LE PONEN ACENTO A CÓNYUGE Y NO A CÓDIGO!!!!1!
+* Con amor, niñita
+* </rant>
+s|conyuge|1| l|IIF(cónyuge, "1", "0")||
+n|hijos|2|0l|cantidad_de_hijos||
+s|cct|1| l|IIF(marcaconvencionado, "1", "0")||
+s|scvo|1| l|IIF(marcasegurovida, "1", "0")||
+s|reduccion|1| l|IIF(MARCA_DE_CORRESPONDE_REDUCCION, "1", "0")||
+s|tipo_empresa|1| l|tipoempresa||
+s|tipo_operacion|1| l|"0"||
+* A pesar de no ser campos numéricos, los ineptos de AFIP necesitan el pad con 0
+s|cod_situacion|2|0l|CODIGO_DE_SITUACIÓN||
+s|cod_condicion|2|0l|CODIGO_DE_CONDICIÓN||
+s|cod_actividad|3|0l|CÓDIGO_DE_ACTIVIDAD||
+s|cod_contratacion|3| l|CÓDIGO_DE_MODALIDAD_DE_CONTRATACION||
+s|cod_siniestrado|2| l|CODIGO_DE_SINIESTRADO||
+* No usar el de SICOSS. Uso 7 (significa BSAS - Resto de la provincia)
+s|cod_localidad|2|0l|7||
+n|sitrev1|2|0l|IIF(SITUACION1 == -1, "", SITUACION1)||
+n|dia_rev1|2|0l|DIA1||
+n|sitrev2|2|0l|IIF(SITUACION2 == -1, "", SITUACION2)||
+n|dia_rev2|2|0l|DIA2||
+n|sitrev3|2|0l|IIF(SITUACION3 == -1, "", SITUACION3)||
+n|dia_rev3|2|0l|DIA3||
+n|dias_trab|2|0l|DIASTRABAJADOS||
+n|hs_trab|3|0l|0||
+n|apoadipor|5|0l|0||
+n|cont_tarea_dif|5|0l|0||
+s|cod_ooss|6| l|Código_de_Obra_Social||
+n|cant_adh|2|0l|Cantidad_de_adherentes||
+n|apo_adi_ooss|15|0l|IIF(Código_de_Obra_Social == '126205', 100.00, 0.00)||
+n|cont_adi_ooss|15|0l|0||
+n|base_aportes_os_fsr|15|0l|0||
+n|base_os_fsr|15|0l|0||
+n|base_lrt|15|0l|0||
+n|rem_mater_anses|15|0l|0||
+n|rem_bruta|15|0l|suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag + mandin + inddes + indpre + indvac + AA0610||
+n|base_1|15|0l|suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag||
+n|base_2|15|0l|suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag||
+n|base_3|15|0l|suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag||
+* Casteo porque cuando divido por IIF(jornada == 0, 0.5, 1.0) (int) pasa a tener cuatro decimales. _Thank you, FoxPro!_
+n|base_4|15|0l|CAST((suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag) / IIF(jornada == 0, 0.5, 1.0) + AA0610 AS B(2))||
+n|base_5|15|0l|suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag||
+n|base_6|15|0l|0||
+n|base_7|15|0l|0||
+n|base_8|15|0l|CAST((suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag) / IIF(jornada == 0, 0.5, 1.0) + AA0610 AS B(2))||
+n|base_9|15|0l|suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag + mandin + AA0610||
+n|base_aporte_ss|15|0l|0||
+n|base_contrib_ss|15|0l|0||
+n|base_10|15|0l|0||
+n|detraccion|15|0l|CAST(IIF((suebas + accid + susp + falta + enfer + adibas + antigu + pres + sac_a + vacpag) - (7003.6 * IIF(jornada == 0, 0.5, 1.0)) < 3237.98, 0, (7003.6 * IIF(jornada == 0, 0.5, 1.0))) AS B(2))||

@@ -1,0 +1,11 @@
+n|id_registro|2|0l|1||
+s|cuit_empleador|11| l|cuit_a|-|
+* SJ: Informa liquidacion SyJ y datos de F931
+* RE: Solo informa F931 para rectificar
+s|id_envio|2| l|"SJ"||
+s|periodo|6| l|_sPeriod||
+* (M)es, (Q)uincena, (D)ias, (H)oras. Vacío si id_envio == "RE"
+s|tipo_liq|1| l|"M"||
+n|nro_liq|5|0l|1||
+n|dias_base|2|0l|30||
+n|cant_reg_04|6|0l|_nReg04Cnt||

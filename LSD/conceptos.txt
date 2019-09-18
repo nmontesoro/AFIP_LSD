@@ -1,0 +1,20 @@
+* codigo|descripcion|formula|(C)redito o (D)ebito|Cantidad|Cuando escribir
+"SUEBAS"|Sueldo basico|ABS(suebas)|"C"|0|SUEBAS <> 0
+"ADIBAS"|Adicional basico|ABS(adibas)|"C"|0|ADIBAS <> 0
+* "ACCID"|Accidente de trabajo|ABS(accid)|"C"|0|ACCID <> 0
+"ANTIGU"|Antiguedad|ABS(antigu)|"C"|0|ANTIGU <> 0
+"SAC"|Sueldo Anual Complementario|ABS(sac_a)|"C"|0|SAC_a <> 0
+* "VACPAG"|Vacaciones pagas|ABS(vacpag)|"C"|0|VACPAG <> 0
+"PRES"|Presentismo|ABS(pres)|"C"|0|PRES <> 0
+* "ENFER"|Enfermedad|ABS(enfer)|"C"|0|ENFER <> 0
+* "SUSP"|Suspension|ABS(susp)|"D"|0|SUSP <> 0
+* "FALTA"|Falta injustificada|ABS(falta)|"D"|0|falta <> 0
+"SEPE"|Sepelio|ABS(sepe)|"C"|0|sepe <> 0
+"INDDES"|Indemnizacion por despido|ABS(inddes)|"C"|0|inddes <> 0
+"INDPRE"|Indemnizacion sustitutiva del preaviso|ABS(indpre)|"C"|0|indpre <> 0
+"INSSJP"|INSSJyP|ABS(inssjp)|"D"|0|inssjp <> 0
+"OBRSOC"|Obra social|ABS(obrsoc)|"D"|0|obrsoc <> 0
+"ANSSAL"|ANSSAL|ABS(anssal)|"D"|0|anssal <> 0
+"CUOSIN"|Retencion sindical|ABS(cuosin)|"D"|0|cuosin <> 0
+"SEGVID"|Seguro de vida|ABS(segvid)|"D"|0|segvid <> 0
+"DEC56119"|Dec. 561/19|ABS(dec56119)|"C"|0|dec56119 <> 0
