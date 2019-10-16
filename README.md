@@ -83,3 +83,6 @@ Las siguientes variables pueden ser utilizadas en los archivos de configuración
 
  - **replace** y **replacement** toman **de a un caracter a la vez**. No reemplazan palabras enteras.
  - Todos los archivos de configuración **deben finalizar con una línea en blanco**.
+ 
+ ## Documentación adicional
+ Se puede consultar el manual de bolsillo publicado por AFIP, de 53 páginas, detallando todos los aspectos del Libro de Sueldos Digital, entrando [aquí](https://www.afip.gob.ar/LibrodeSueldosDigital/documentos/ConceptosBasicosGuiadeUso.pdf).
